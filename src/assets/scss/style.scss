@@ -1,0 +1,52 @@
+@import "vars";
+@import "mixins";
+@import "vendor/reset";
+@font-face{
+    font-family: "TT Norms";
+    src:url("../fonts/TTNorms-Medium.ttf");
+    font-weight: 500;
+    font-style: normal;
+}
+@font-face{
+    font-family: "TT Norms";
+    src:url("../fonts/TTNorms-Bold.ttf");
+    font-weight: 700;
+    font-style: normal;
+}
+
+html{
+    font-size: 10px;
+}
+body {
+    font-family: "TT Norms";
+    font-weight: 500;
+    background-color: rgb(136, 129, 172);
+    font-size: 21px;
+    color: $primary;
+    font-size: 1.8rem;
+}
+
+
+
+*,
+*:before,
+*:after{
+    box-sizing: border-box;
+}
+
+
+a{
+    display: block;
+    text-decoration: none;
+    &:hover{
+        text-decoration: underline;
+    }
+}
+
+
+//blocks
+
+@import "blocks/container";
+@import "blocks/header";
+@import "blocks/nav";
+@import "blocks/social";

@@ -1,0 +1,27 @@
+
+.nav__list{
+    display: flex;
+    &--db{
+        display: block;
+    }
+}
+
+
+.nav__link{
+    font-size: 1.4rem;
+    font-weight: 500;
+    color: $primary;
+    line-height: 16.5px;
+    transition: color .2s linear;
+    text-transform: uppercase;
+    &--header-r{
+        margin-bottom: 0.7rem;
+        font-size: 1.8rem;
+        line-height: 21px;
+        color: $secondary;
+        
+    }
+    &:hover{
+        color: $secondary;
+    }
+}

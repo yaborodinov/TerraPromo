@@ -1,0 +1,32 @@
+.header{
+    padding-top: 1rem;
+    
+}
+
+.logo{
+    width: 15rem;
+    height: 11.7rem;
+    margin-right: 2.5rem;
+}
+
+.header__nav-wrapper{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+.header__left{
+    padding-top: 2rem;
+    & .nav__link{
+    margin-right: 3.5rem;
+
+    }
+}
+.header__right{
+    padding-top: 1.5rem;
+    display: flex;
+    justify-content: flex-end;
+    & .nav{
+        display: block;
+        padding-right: 5rem;
+    }
+}

@@ -1,0 +1,13 @@
+.social__block{
+    display: flex;
+    flex-direction: row;
+}
+.social__item{
+    margin-right: 0.8rem;
+    &:hover{
+        cursor: pointer;
+    }
+    &:last-child{
+        margin-right: 0;
+    }
+}
