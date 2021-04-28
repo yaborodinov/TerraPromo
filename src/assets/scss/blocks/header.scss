@@ -1,5 +1,6 @@
 .header{
-    padding-top: 1rem;
+    display: flex;
+    justify-content: center;
     
 }
 
@@ -9,22 +10,30 @@
     margin-right: 2.5rem;
 }
 
-.header__nav-wrapper{
-    width: 100%;
-    display: flex;
-    justify-content: space-between;
-}
+
 .header__left{
-    padding-top: 2rem;
+
+    width: 56.6667%;
+    display: flex;
+    justify-content: flex-end;
+    padding-top: 1rem;
+    padding-right: 2.7rem;
+    padding-left: 1.5rem;
     & .nav__link{
-    margin-right: 3.5rem;
+        padding-top: 2rem;
+        margin-right: 3.5rem;
 
     }
 }
 .header__right{
-    padding-top: 1.5rem;
+
+    background-color: $primary;
+    width: 43.3333%;
+    padding-top: 2.5rem;
     display: flex;
-    justify-content: flex-end;
+    justify-content: flex-start;
+    padding-left: 11.6rem;
+    padding-right: 1.5rem;
     & .nav{
         display: block;
         padding-right: 5rem;

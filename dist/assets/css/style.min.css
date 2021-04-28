@@ -368,27 +368,33 @@ a {
     justify-content: flex-start; }
 
 .header {
-  padding-top: 1rem; }
+  display: flex;
+  justify-content: center; }
 
 .logo {
   width: 15rem;
   height: 11.7rem;
   margin-right: 2.5rem; }
 
-.header__nav-wrapper {
-  width: 100%;
-  display: flex;
-  justify-content: space-between; }
-
 .header__left {
-  padding-top: 2rem; }
+  width: 56.6667%;
+  display: flex;
+  justify-content: flex-end;
+  padding-top: 1rem;
+  padding-right: 2.7rem;
+  padding-left: 1.5rem; }
   .header__left .nav__link {
+    padding-top: 2rem;
     margin-right: 3.5rem; }
 
 .header__right {
-  padding-top: 1.5rem;
+  background-color: #3E4B64;
+  width: 43.3333%;
+  padding-top: 2.5rem;
   display: flex;
-  justify-content: flex-end; }
+  justify-content: flex-start;
+  padding-left: 11.6rem;
+  padding-right: 1.5rem; }
   .header__right .nav {
     display: block;
     padding-right: 5rem; }
@@ -428,18 +434,22 @@ a {
     margin-right: 0; }
 
 .section {
-  margin-top: 0.7rem;
-  margin-bottom: 18.7rem;
   display: flex;
   position: relative; }
 
 .section__title-block {
-  width: 50%;
-  margin-top: 8.5rem; }
+  display: flex;
+  justify-content: flex-end;
+  width: 56.6667%;
+  height: 75.6rem;
+  padding-left: 1.5rem;
+  background-image: url(../images/section/bg-img.png);
+  background-position: top left;
+  background-repeat: no-repeat; }
 
 .section__title {
-  display: block;
-  margin-left: 12.4rem;
+  margin-top: 9.2rem;
+  margin-right: 23.2rem;
   max-width: 43.7rem;
   font-size: 4rem;
   line-height: 47px;
@@ -447,40 +457,45 @@ a {
   font-weight: 700;
   color: #3E4B64; }
 
-.section__title-bg {
-  width: 85.6rem;
-  height: 75.6rem;
-  overflow: hidden;
-  position: absolute;
-  top: -15.5rem;
-  left: -38.2rem;
-  z-index: -10; }
-  .section__title-bg img {
-    width: 100%;
-    height: auto; }
-
 .section__about-block {
-  width: 50%;
-  margin-right: 0.6rem;
-  display: flex;
-  justify-content: flex-end;
+  padding-top: 0.7rem;
+  margin-top: -0.1rem;
+  width: 43.3333%;
+  height: 45.3rem;
+  padding-right: 1.5rem;
+  background-color: #3E4B64;
   position: relative; }
 
 .section__about-image {
-  max-width: 54.9rem; }
+  max-width: 54.9rem;
+  position: absolute;
+  left: -11.4rem;
+  top: 0.6rem;
+  z-index: 10; }
 
 .section__about-image-item {
   width: 100%;
   height: auto; }
 
-.section__about-bg {
+.section__about-dots {
   position: absolute;
-  left: 18.7rem;
-  bottom: -5.1rem;
-  z-index: -20;
-  background-color: #3E4B64;
-  height: 80rem;
-  width: 80rem; }
+  left: 27.4rem;
+  top: 1.5rem;
+  z-index: 30; }
+
+.btn {
+  position: absolute;
+  bottom: 8.7rem;
+  left: 11.4rem;
+  z-index: 25;
+  border: none;
+  padding: 1.6rem 8.5rem;
+  background-color: #DDB04E;
+  color: white;
+  letter-spacing: 0.05em;
+  line-height: 22px;
+  font-weight: 700;
+  font-size: 1.8rem; }
 
 .footer {
   width: 60.3rem;
