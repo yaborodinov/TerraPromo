@@ -7,6 +7,8 @@
 }
 
 
+
+
 .nav__link{
     font-size: 1.4rem;
     font-weight: 500;
@@ -18,8 +20,11 @@
         margin-bottom: 0.7rem;
         font-size: 1.8rem;
         line-height: 21px;
-        color: $secondary;
-        
+        color: $secondary; 
+    }
+    &--thin{
+        font-weight: 400;
+        letter-spacing: 0.05em;
     }
     &:hover{
         color: $secondary;

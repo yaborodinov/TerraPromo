@@ -329,13 +329,20 @@ textarea {
   font-weight: 700;
   font-style: normal; }
 
+@font-face {
+  font-family: "TT Norms";
+  src: url("../fonts/TTNorms-Regular.ttf");
+  font-weight: 400;
+  font-style: normal; }
+
 html {
-  font-size: 10px; }
+  font-size: 10px;
+  overflow: hidden; }
 
 body {
   font-family: "TT Norms";
   font-weight: 500;
-  background-color: #8881ac;
+  background-color: white;
   font-size: 21px;
   color: #3E4B64;
   font-size: 1.8rem; }
@@ -403,6 +410,9 @@ a {
     font-size: 1.8rem;
     line-height: 21px;
     color: #DDB04E; }
+  .nav__link--thin {
+    font-weight: 400;
+    letter-spacing: 0.05em; }
   .nav__link:hover {
     color: #DDB04E; }
 
@@ -416,3 +426,64 @@ a {
     cursor: pointer; }
   .social__item:last-child {
     margin-right: 0; }
+
+.section {
+  margin-top: 0.7rem;
+  margin-bottom: 18.7rem;
+  display: flex;
+  position: relative; }
+
+.section__title-block {
+  width: 50%;
+  margin-top: 8.5rem; }
+
+.section__title {
+  display: block;
+  margin-left: 12.4rem;
+  max-width: 43.7rem;
+  font-size: 4rem;
+  line-height: 47px;
+  letter-spacing: 0.05;
+  font-weight: 700;
+  color: #3E4B64; }
+
+.section__title-bg {
+  width: 85.6rem;
+  height: 75.6rem;
+  overflow: hidden;
+  position: absolute;
+  top: -15.5rem;
+  left: -38.2rem;
+  z-index: -10; }
+  .section__title-bg img {
+    width: 100%;
+    height: auto; }
+
+.section__about-block {
+  width: 50%;
+  margin-right: 0.6rem;
+  display: flex;
+  justify-content: flex-end;
+  position: relative; }
+
+.section__about-image {
+  max-width: 54.9rem; }
+
+.section__about-image-item {
+  width: 100%;
+  height: auto; }
+
+.section__about-bg {
+  position: absolute;
+  left: 18.7rem;
+  bottom: -5.1rem;
+  z-index: -20;
+  background-color: #3E4B64;
+  height: 80rem;
+  width: 80rem; }
+
+.footer {
+  width: 60.3rem;
+  height: 1.2rem;
+  background-color: #DDB04E;
+  margin-top: -1.2rem; }
