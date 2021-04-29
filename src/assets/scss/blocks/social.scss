@@ -1,9 +1,20 @@
 .social__block{
     display: flex;
     flex-direction: row;
+    @include breakpoint($laptop-xl-bp){
+        flex-direction: column;
+        
+        
+    }
 }
 .social__item{
     margin-right: 0.8rem;
+    @include breakpoint($laptop-xl-bp){
+        margin-bottom: 0.4rem;
+        &:last-child{
+            margin-bottom: 0;
+        }
+    }
     &:hover{
         cursor: pointer;
     }

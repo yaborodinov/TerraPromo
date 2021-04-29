@@ -425,8 +425,22 @@ a:hover {
 
 .logo {
     width: 15rem;
-    height: 11.7rem;
     margin-right: 2.5rem;
+}
+
+.logo a {
+    width: 100%;
+}
+
+@media screen and (max-width: 1199px) {
+    .logo {
+        width: 8rem;
+    }
+}
+
+.logo__item {
+    width: 100%;
+    height: auto;
 }
 
 .header__left {
@@ -445,6 +459,36 @@ a:hover {
     margin-right: 3.5rem;
 }
 
+@media screen and (max-width: 1440px) {
+    .header__left .nav__link {
+        margin-right: 2.5rem;
+        font-size: 1.3rem;
+        position: relative;
+    }
+}
+
+@media screen and (max-width: 1440px) and (max-width: 991px) {
+    .header__left .nav__link {
+        padding-top: 1.8rem;
+    }
+}
+
+@media screen and (max-width: 1199px) {
+    .header__left {
+        width: 70%;
+    }
+}
+
+@media screen and (max-width: 991px) {
+    .header__left {
+        width: 100%;
+        -ms-flex-pack: justify;
+        justify-content: space-between;
+        -ms-flex-align: baseline;
+        align-items: baseline;
+    }
+}
+
 .header__right {
     background-color: #3E4B64;
     width: 43.3333%;
@@ -457,9 +501,40 @@ a:hover {
     padding-right: 1.5rem;
 }
 
-.header__right .nav {
+.header__right .contact {
     display: block;
     padding-right: 5rem;
+}
+
+@media screen and (max-width: 1199px) {
+    .header__right {
+        width: 30%;
+        padding-left: 4.6rem;
+    }
+}
+
+@media screen and (max-width: 991px) {
+    .header__right {
+        display: none;
+        width: 0;
+    }
+}
+
+@media screen and (max-width: 991px) {
+    .nav {
+        position: absolute;
+        width: 100%;
+        top: 7.2rem;
+        left: 0;
+        z-index: 40;
+        background-color: #fff;
+        padding-bottom: 5.5rem;
+        display: none;
+    }
+
+    .nav.active {
+        display: block;
+    }
 }
 
 .nav__list {
@@ -471,6 +546,15 @@ a:hover {
     display: block;
 }
 
+@media screen and (max-width: 991px) {
+    .nav__list {
+        -ms-flex-direction: column;
+        flex-direction: column;
+        -ms-flex-align: center;
+        align-items: center;
+    }
+}
+
 .nav__link {
     font-size: 1.4rem;
     font-weight: 500;
@@ -480,20 +564,123 @@ a:hover {
     text-transform: uppercase;
 }
 
-.nav__link--header-r {
+.nav__link:hover {
+    color: #DDB04E;
+}
+
+.nav__list-contact, .nav__list-social__block {
+    display: none;
+}
+
+@media screen and (max-width: 991px) {
+    .nav__list-contact, .nav__list-social__block {
+        display: -ms-flexbox;
+        display: flex;
+    }
+}
+
+.nav__list-contact {
+    margin-top: 1.8rem;
+}
+
+@media screen and (max-width: 991px) {
+    .nav__list-social__block {
+        -ms-flex-pack: center;
+        justify-content: center;
+    }
+
+    .nav__list-social__block .nav__list-social__item {
+        margin-right: 1.5rem;
+    }
+}
+
+.nav__list-social__item img {
+    width: 2.8rem;
+    height: 2.8rem;
+}
+
+.contact__link {
     margin-bottom: 0.7rem;
     font-size: 1.8rem;
     line-height: 21px;
     color: #DDB04E;
 }
 
-.nav__link--thin {
+.contact__link--thin {
     font-weight: 400;
     letter-spacing: 0.05em;
 }
 
-.nav__link:hover {
-    color: #DDB04E;
+.burger {
+    display: none;
+    width: 4rem;
+    height: 3.2rem;
+    background: none;
+    border: none;
+    padding: 0;
+    position: absolute;
+    top: 3.7rem;
+    right: 1.5rem;
+    font-size: 0;
+    color: black;
+    -webkit-transform: translateY(-50%);
+    transform: translateY(-50%);
+}
+
+.burger:before, .burger:after,
+  .burger span {
+    display: block;
+    width: 100%;
+    height: 3px;
+    background-color: black;
+    position: absolute;
+    left: 0;
+}
+
+.burger:before, .burger:after {
+    content: "";
+    transition: -webkit-transform .2s linear;
+    transition: transform .2s linear;
+    transition: transform .2s linear, -webkit-transform .2s linear;
+}
+
+.burger:before {
+    top: 0;
+}
+
+.burger:after {
+    bottom: 0;
+}
+
+.burger span {
+    top: 50%;
+    -webkit-transform: translateY(-50%);
+    transform: translateY(-50%);
+    transition: opacity 0.2s linear;
+}
+
+@media screen and (max-width: 991px) {
+    .burger {
+        display: block;
+    }
+}
+
+.active span {
+    opacity: 0;
+}
+
+.active:before, .active:after {
+    top: 50%;
+}
+
+.active::before {
+    -webkit-transform: rotate(45deg);
+    transform: rotate(45deg);
+}
+
+.active::after {
+    -webkit-transform: rotate(-45deg);
+    transform: rotate(-45deg);
 }
 
 .social__block {
@@ -503,8 +690,25 @@ a:hover {
     flex-direction: row;
 }
 
+@media screen and (max-width: 1199px) {
+    .social__block {
+        -ms-flex-direction: column;
+        flex-direction: column;
+    }
+}
+
 .social__item {
     margin-right: 0.8rem;
+}
+
+@media screen and (max-width: 1199px) {
+    .social__item {
+        margin-bottom: 0.4rem;
+    }
+
+    .social__item:last-child {
+        margin-bottom: 0;
+    }
 }
 
 .social__item:hover {
@@ -521,6 +725,13 @@ a:hover {
     position: relative;
 }
 
+@media screen and (max-width: 991px) {
+    .section {
+        -ms-flex-direction: column-reverse;
+        flex-direction: column-reverse;
+    }
+}
+
 .section__title-block {
     display: -ms-flexbox;
     display: flex;
@@ -534,6 +745,23 @@ a:hover {
     background-repeat: no-repeat;
 }
 
+@media screen and (max-width: 1199px) {
+    .section__title-block {
+        width: 70%;
+        height: 59.6rem;
+    }
+}
+
+@media screen and (max-width: 991px) {
+    .section__title-block {
+        width: 100%;
+        position: absolute;
+        left: 0;
+        bottom: 3rem;
+        z-index: 30;
+    }
+}
+
 .section__title {
     margin-top: 9.2rem;
     margin-right: 23.2rem;
@@ -543,6 +771,24 @@ a:hover {
     letter-spacing: 0.05;
     font-weight: 700;
     color: #3E4B64;
+}
+
+@media screen and (max-width: 1199px) {
+    .section__title {
+        font-size: 3.2rem;
+    }
+}
+
+@media screen and (max-width: 991px) {
+    .section__title {
+        margin-right: 0;
+        position: absolute;
+        bottom: 0;
+        color: #fff;
+        font-size: 2.8rem;
+        padding-right: 1.5rem;
+        padding-left: 1.5rem;
+    }
 }
 
 .section__about-block {
@@ -555,9 +801,17 @@ a:hover {
     position: relative;
 }
 
-.section__about-block a {
-    display: block;
-    z-index: 44;
+@media screen and (max-width: 1199px) {
+    .section__about-block {
+        width: 30%;
+    }
+}
+
+@media screen and (max-width: 991px) {
+    .section__about-block {
+        width: 100%;
+        height: 56.7rem;
+    }
 }
 
 .section__about-image {
@@ -568,23 +822,91 @@ a:hover {
     z-index: 10;
 }
 
+@media screen and (max-width: 1199px) {
+    .section__about-image {
+        min-width: 37rem;
+    }
+}
+
+@media screen and (max-width: 991px) {
+    .section__about-image {
+        width: 31.2rem;
+        left: 3.6rem;
+    }
+}
+
+@media screen and (max-width: 575px) {
+    .section__about-image {
+        width: 29.2rem;
+        min-width: 29rem;
+        left: 1.6rem;
+    }
+}
+
 .section__about-image-item {
     width: 100%;
     height: auto;
 }
 
 .section__about-dots {
+    width: 37.1rem;
+    height: auto;
     position: absolute;
     left: 27.4rem;
     top: 1.5rem;
     z-index: 30;
 }
 
+@media screen and (max-width: 1440px) {
+    .section__about-dots {
+        left: 18rem;
+        width: 30rem;
+    }
+}
+
+@media screen and (max-width: 1199px) {
+    .section__about-dots {
+        left: 0rem;
+        width: 27rem;
+        top: 30.5rem;
+    }
+}
+
+@media screen and (max-width: 991px) {
+    .section__about-dots {
+        top: 15rem;
+        left: -14rem;
+    }
+}
+
 .btn {
+    position: absolute;
+    bottom: 8.7rem;
+    left: 11.4rem;
     z-index: 25;
-    padding: 1.6rem 7.3rem;
-    background-color: #161616;
+    border: none;
+    padding: 1.6rem 8.5rem;
+    background-color: #DDB04E;
     color: white;
+    letter-spacing: 0.05em;
+    line-height: 22px;
+    font-weight: 700;
+    font-size: 1.8rem;
+}
+
+@media screen and (max-width: 1199px) {
+    .btn {
+        left: -8rem;
+        bottom: 14rem;
+        padding: 1.4rem 4.5rem;
+    }
+}
+
+@media screen and (max-width: 991px) {
+    .btn {
+        bottom: -2.5rem;
+        left: 2rem;
+    }
 }
 
 .footer {
@@ -592,4 +914,10 @@ a:hover {
     height: 1.2rem;
     background-color: #DDB04E;
     margin-top: -1.2rem;
+}
+
+@media screen and (max-width: 991px) {
+    .footer {
+        display: none;
+    }
 }

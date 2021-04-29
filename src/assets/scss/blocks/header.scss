@@ -2,14 +2,25 @@
     display: flex;
     justify-content: center;
     
+    
 }
 
 .logo{
     width: 15rem;
-    height: 11.7rem;
     margin-right: 2.5rem;
+    a{
+        width: 100%;
+    }
+    @include breakpoint($laptop-xl-bp){
+        width: 8rem;
+    }
+    
 }
-
+.logo__item{
+    width: 100%;
+    height: auto;
+    
+}
 
 .header__left{
 
@@ -22,7 +33,23 @@
     & .nav__link{
         padding-top: 2rem;
         margin-right: 3.5rem;
+        @include breakpoint($laptop-l-bp){
+        margin-right: 2.5rem;
+        font-size: 1.3rem;
+        position: relative;
+        @include breakpoint($tablet-bp){
+            padding-top: 1.8rem;
+        }
+    }
 
+    }
+    @include breakpoint($laptop-xl-bp){
+        width: 70%;
+    }
+    @include breakpoint($tablet-bp){
+        width: 100%;
+        justify-content: space-between;
+        align-items: baseline;
     }
 }
 .header__right{
@@ -34,9 +61,18 @@
     justify-content: flex-start;
     padding-left: 11.6rem;
     padding-right: 1.5rem;
-    & .nav{
+    & .contact{
         display: block;
         padding-right: 5rem;
     };
+    
+    @include breakpoint($laptop-xl-bp){
+        width: 30%;
+        padding-left: 4.6rem;
+    }
+    @include breakpoint($tablet-bp){
+        display: none;
+        width: 0;
+    }
     
 }

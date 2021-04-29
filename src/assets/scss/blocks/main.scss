@@ -1,0 +1,7 @@
+
+.disable{
+    opacity: 1;
+    @include breakpoint($tablet-bp){
+    opacity: 0.3;
+    }
+}

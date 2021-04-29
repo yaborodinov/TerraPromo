@@ -12,4 +12,13 @@
     line-height: 22px;
     font-weight: 700;
     font-size: 1.8rem;
+    @include breakpoint($laptop-xl-bp){
+        left: -8rem;
+        bottom: 14rem;
+        padding: 1.4rem 4.5rem;
+    };
+    @include breakpoint($tablet-bp){
+        bottom: -2.5rem;
+        left: 2rem;
+    };
 }
